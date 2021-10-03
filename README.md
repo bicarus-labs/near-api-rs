@@ -10,7 +10,7 @@ First, add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-near-api = "0.1.0"
+near-api = { git = "https://github.com/bicarus-labs/near-api-rs", version = "0.1.0", rev = "6b960bcf86781c09dc7de2cb38134916da888c63" }
 ```
 
 ## Example
