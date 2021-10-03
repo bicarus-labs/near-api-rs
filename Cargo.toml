@@ -1,6 +1,6 @@
 [package]
 name = "near-api"
-version = "0.0.1"
+version = "0.1.0"
 edition = "2018"
 homepage = "https://github.com/bicarus-labs/near-api-rs"
 repository = "https://github.com/bicarus-labs/near-api-rs"
@@ -24,5 +24,6 @@ serde_json = "1"
 uuid = { version = "~0.8", features = ["v4"] }
 borsh = "0.9"
 near-sdk = "3.1.0"
-near-jsonrpc-primitives = { path = "deps/nearcore/chain/jsonrpc-primitives", version = "0.2.0" }
-near-primitives = { path = "deps/nearcore/core/primitives", version = "0.1.0" }
+
+near-primitives = { git = "https://github.com/near/nearcore", version = "0.1.0", rev = "007adbcef989ae44a61c8cb23f6a8de2cdd49cc4" }
+near-jsonrpc-primitives = { git = "https://github.com/near/nearcore", version = "0.2.0", rev = "007adbcef989ae44a61c8cb23f6a8de2cdd49cc4" }
