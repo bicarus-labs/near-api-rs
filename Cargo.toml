@@ -1,0 +1,30 @@
+[package]
+name = "near-api"
+version = "0.0.1"
+edition = "2018"
+homepage = "https://github.com/bicarus-labs/near-api-rs"
+repository = "https://github.com/bicarus-labs/near-api-rs"
+documentation = "https://docs.rs/near-api"
+license = "MIT"
+description = """
+Rust implementation of Near API library that compatible with tokio.
+"""
+categories = ["api-bindings"]
+keywords = ["jsonrpc", "near", "api", "rpc", "client", "tokio"]
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = "1.12.0"
+reqwest = { version = "0.11", features = ["json"] }
+futures = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uuid = { version = "~0.8", features = ["v4"] }
+borsh = "0.9"
+near-sdk = "3.1.0"
+near-jsonrpc-client = { git = "https://github.com/near/nearcore", version = "0.1.0", rev = "007adbcef989ae44a61c8cb23f6a8de2cdd49cc4" }
+near-jsonrpc-primitives = { git = "https://github.com/near/nearcore", version = "0.2.0", rev = "007adbcef989ae44a61c8cb23f6a8de2cdd49cc4" }
+near-primitives = { git = "https://github.com/near/nearcore", version = "0.1.0", rev = "007adbcef989ae44a61c8cb23f6a8de2cdd49cc4" }
+ref-exchange = { git = "https://github.com/ref-finance/ref-contracts", version = "1.1.0", rev = "e96a6b5e3b403a3ba5271b6a03843a50b3e54a4f" }
