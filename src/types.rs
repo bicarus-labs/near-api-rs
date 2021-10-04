@@ -1,5 +1,5 @@
 use borsh::{BorshDeserialize, BorshSerialize};
-use near_primitives::{
+use near_primitives_v01::{
     hash::CryptoHash,
     merkle::MerklePath,
     serialize::u128_dec_format,

@@ -8,9 +8,21 @@ First, add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-near-api = { git = "https://github.com/bicarus-labs/near-api-rs", version = "0.1.0", rev = "6b960bcf86781c09dc7de2cb38134916da888c63" }
+near-api = "0.1.0"
 ```
 
 ## Example
 
-For more see [examples folder](./src/examples).
+```rust
+use near_primitives_v01::types::{BlockReference, Finality};
+
+#[tokio::test]
+async fn get_pools() {
+    let near_client = near_api::new_client("https://rpc.mainnet.near.org");
+    let block = near_client
+        .block(BlockReference::Finality(Finality::Final))
+        .await
+        .unwrap();
+    println!("block {}", block.header.height);
+}
+```

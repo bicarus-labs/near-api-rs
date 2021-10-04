@@ -1,4 +1,3 @@
-mod examples;
 pub mod types;
 
 use std::str;
@@ -14,10 +13,10 @@ use near_jsonrpc_primitives::types::changes::{
     RpcStateChangesInBlockByTypeRequest, RpcStateChangesInBlockByTypeResponse,
 };
 use near_jsonrpc_primitives::types::validator::RpcValidatorsOrderedRequest;
-use near_primitives::hash::CryptoHash;
-use near_primitives::types::{AccountId, BlockId, BlockReference, MaybeBlockId, ShardId};
-use near_primitives::views::validator_stake_view::ValidatorStakeView;
-use near_primitives::views::{
+use near_primitives_v01::hash::CryptoHash;
+use near_primitives_v01::types::{AccountId, BlockId, BlockReference, MaybeBlockId, ShardId};
+use near_primitives_v01::views::validator_stake_view::ValidatorStakeView;
+use near_primitives_v01::views::{
     BlockView, ChunkView, EpochValidatorInfo, GasPriceView, StatusResponse,
 };
 use types::FinalExecutionOutcomeView;
