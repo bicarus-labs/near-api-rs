@@ -2,6 +2,8 @@
 
 Rust implementation of Near API library that compatible with `tokio`.
 
+[![Crates.io](https://img.shields.io/crates/v/near-api)](https://crates.io/crates/near-api)
+
 ## Usage
 
 First, add this to your `Cargo.toml`:
